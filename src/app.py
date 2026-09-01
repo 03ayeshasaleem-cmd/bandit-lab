@@ -1,3 +1,4 @@
 import subprocess
 
-subprocess.run(["ls", "-la"], check=True)
+def run_command(command):
+    subprocess.run(["ls", "-la"], check=True)
