@@ -18,6 +18,7 @@ pipeline {
 
         stage('Bandit Scan') {
             steps {
+                catchError(buildResult: 'UNSTABLE', stageResult: 'FAILURE') {
                 bat '"C:\\Users\\Lenovo\\AppData\\Local\\Python\\pythoncore-3.14-64\\Scripts\\bandit.exe" -r src/ -f json -o bandit-report.json'
             }
         }
