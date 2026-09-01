@@ -17,7 +17,7 @@ pipeline {
 
         stage('Bandit Scan') {
             steps {
-                bat '"C:\\Users\\Lenovo\\AppData\\Local\\Python\\pythoncore-3.14-64\\Scripts\\bandit.exe" -r . -s B404 -f json -o bandit-report.json'
+                bat '"C:\\Users\\Lenovo\\AppData\\Local\\Python\\pythoncore-3.14-64\\Scripts\\bandit.exe" -r . -ll -f json -o bandit-report.json'
             }
         }
     }
